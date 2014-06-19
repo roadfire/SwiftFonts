@@ -17,13 +17,14 @@ class ViewController: UITableViewController
     {
         super.init(coder: aDecoder)
 
+        let sorter = FontSorter()
         let unsortedFamilyNames = UIFont.familyNames() as String[]
         familyNames = sort(unsortedFamilyNames)
 
         for familyName in familyNames
         {
             let unsortedFontNames = UIFont.fontNamesForFamilyName(familyName) as String[]
-            fonts[familyName] = sortFontNames(unsortedFontNames)
+            fonts[familyName] = sorter.sortFontNames(unsortedFontNames)
         }
     }
 
@@ -65,32 +66,5 @@ class ViewController: UITableViewController
         label.sizeToFit()
 
         return max(label.font.lineHeight + label.font.ascender + -label.font.descender, 44)
-    }
-
-    /* This function is necessary because fonts shouldn't always be sorted alphabetically.
-       For example, ArialMT should come before Arial-BoldItalicMT,
-       but if we sort alphabetically, it doesn't. */
-    func sortFontNames(array: String[]) -> String[]
-    {
-        return sort(array, { (s1: String, s2: String) -> Bool in
-            // if s1 doesn't contain a hyphen, it should appear before s2
-            let count1 = countElements(s1.componentsSeparatedByString("-"))
-            let s1ContainsHyphen = count1 != 1
-            if !s1ContainsHyphen
-            {
-                return true
-            }
-
-            // if s2 doesn't contain a hyphen, it should appear before s1
-            let count2 = countElements(s2.componentsSeparatedByString("-"))
-            let s2ContainsHyphen = count2 != 1
-            if !s2ContainsHyphen
-            {
-                return false
-            }
-
-            // otherwise, a normal string compare will be fine
-            return s1 > s2
-            })
     }
 }
