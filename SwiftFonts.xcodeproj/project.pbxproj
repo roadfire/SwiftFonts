@@ -12,7 +12,6 @@
 		033EB974193EA367006704FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033EB973193EA367006704FA /* ViewController.swift */; };
 		033EB977193EA367006704FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033EB975193EA367006704FA /* Main.storyboard */; };
 		033EB979193EA367006704FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 033EB978193EA367006704FA /* Images.xcassets */; };
-		033EB985193EA367006704FA /* SwiftFontsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033EB984193EA367006704FA /* SwiftFontsTests.swift */; };
 		037EC359195315DD004D2234 /* FontSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037EC358195315DD004D2234 /* FontSorter.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +35,6 @@
 		033EB978193EA367006704FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		033EB97E193EA367006704FA /* SwiftFontsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftFontsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		033EB983193EA367006704FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		033EB984193EA367006704FA /* SwiftFontsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFontsTests.swift; sourceTree = "<group>"; };
 		037EC358195315DD004D2234 /* FontSorter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontSorter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				033EB982193EA367006704FA /* Supporting Files */,
-				033EB984193EA367006704FA /* SwiftFontsTests.swift */,
 				031A536319530A9700CF0B19 /* FontSorterTests.swift */,
 			);
 			path = SwiftFontsTests;
@@ -224,7 +221,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				033EB985193EA367006704FA /* SwiftFontsTests.swift in Sources */,
 				031A536419530A9700CF0B19 /* FontSorterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

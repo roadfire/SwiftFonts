@@ -10,17 +10,17 @@ import UIKit
 
 class ViewController: UITableViewController
 {
-    var familyNames : Array<String> = []
-    var fonts : Dictionary<String, String[]> = [:]
+    var familyNames = String[]()
+    var fonts = Dictionary<String, String[]>()
 
     init(coder aDecoder: NSCoder!)
     {
         super.init(coder: aDecoder)
 
-        let sorter = FontSorter()
         let unsortedFamilyNames = UIFont.familyNames() as String[]
         familyNames = sort(unsortedFamilyNames)
 
+        let sorter = FontSorter()
         for familyName in familyNames
         {
             let unsortedFontNames = UIFont.fontNamesForFamilyName(familyName) as String[]
@@ -36,13 +36,13 @@ class ViewController: UITableViewController
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
     {
         let key = familyNames[section]
-        let array : String[] = fonts[key]!
+        let array = fonts[key]!
         return countElements(array)
     }
 
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
     {
-        let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
 
         let key = familyNames[indexPath.section]
         let array = fonts[key]
