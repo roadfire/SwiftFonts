@@ -45,10 +45,4 @@ class MasterViewModel
         let fontName = array![indexPath.row]
         return fontName
     }
-    
-    func fontAtIndexPath(indexPath: NSIndexPath) -> UIFont
-    {
-        let fontName = self.titleAtIndexPath(indexPath)
-        return UIFont(name:fontName, size: UIFont.systemFontSize())
-    }
 }

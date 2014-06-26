@@ -30,8 +30,7 @@ class MasterViewController: UITableViewController
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel.text = viewModel.titleAtIndexPath(indexPath)
-        cell.textLabel.font = viewModel.fontAtIndexPath(indexPath)
+        self.configureCell(cell, atIndexPath: indexPath);
         return cell
     }
 
@@ -39,8 +38,20 @@ class MasterViewController: UITableViewController
     {
         let label = UILabel(frame: CGRectMake(0, 0, 280, 200))
         label.text = viewModel.titleAtIndexPath(indexPath)
-        label.font = viewModel.fontAtIndexPath(indexPath)
+        label.font = self.fontAtIndexPath(indexPath)
         label.sizeToFit()
         return max(label.font.lineHeight + label.font.ascender + -label.font.descender, 44)
+    }
+    
+    func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath)
+    {
+        cell.textLabel.text = viewModel.titleAtIndexPath(indexPath)
+        cell.textLabel.font = self.fontAtIndexPath(indexPath)
+    }
+    
+    func fontAtIndexPath(indexPath: NSIndexPath) -> UIFont
+    {
+        let fontName = viewModel.titleAtIndexPath(indexPath)
+        return UIFont(name:fontName, size: UIFont.systemFontSize())
     }
 }
