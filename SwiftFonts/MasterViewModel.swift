@@ -10,18 +10,18 @@ import UIKit
 
 class MasterViewModel
 {
-    var familyNames : String[]
-    var fonts = Dictionary<String, String[]>()
+    var familyNames : [String]
+    var fonts = [String: [String]]()
 
     init()
     {
-        let unsortedFamilyNames = UIFont.familyNames() as String[]
-        familyNames = sort(unsortedFamilyNames)
+        let unsortedFamilyNames = UIFont.familyNames() as [String]
+        familyNames = sorted(unsortedFamilyNames)
         
         let sorter = FontSorter()
         for familyName in familyNames
         {
-            let unsortedFontNames = UIFont.fontNamesForFamilyName(familyName) as String[]
+            let unsortedFontNames = UIFont.fontNamesForFamilyName(familyName) as [String]
             fonts[familyName] = sorter.sortFontNames(unsortedFontNames)
         }
     }
