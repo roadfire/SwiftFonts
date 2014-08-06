@@ -17,13 +17,15 @@ class FontSorterTests: XCTestCase {
         let fonts = ["Arial-ItalicMT", "ArialMT"]
         let expected = ["ArialMT", "Arial-ItalicMT"]
         let sorted = sorter.sortFontNames(fonts)
-        XCTAssertEqualObjects(expected, sorted, "the array should be sorted properly")
+        XCTAssertEqual(expected[0], sorted[0], "the array should be sorted properly")
+        XCTAssertEqual(expected[1], sorted[1], "the array should be sorted properly")
     }
     
     func testCompareHyphenWithHyphen() {
         let fonts = ["Avenir-Roman", "Avenir-Oblique"]
         let expected = ["Avenir-Oblique", "Avenir-Roman"]
         let sorted = sorter.sortFontNames(fonts)
-        XCTAssertEqualObjects(expected, sorted, "when two fonts contain a hyphen, they should be sorted alphabetically")
+        XCTAssertEqual(expected[0], sorted[0], "when two fonts contain a hyphen, they should be sorted alphabetically")
+        XCTAssertEqual(expected[1], sorted[1], "when two fonts contain a hyphen, they should be sorted alphabetically")
     }
 }
