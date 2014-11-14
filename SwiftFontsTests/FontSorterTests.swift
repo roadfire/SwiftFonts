@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import SwiftFonts
 
 class FontSorterTests: XCTestCase {
     
@@ -17,6 +16,7 @@ class FontSorterTests: XCTestCase {
         let fonts = ["Arial-ItalicMT", "ArialMT"]
         let expected = ["ArialMT", "Arial-ItalicMT"]
         let sorted = sorter.sortFontNames(fonts)
+        XCTAssertEqual(expected[0], sorted[0], "the array should be sorted properly")
         assertEquals(expected, sorted, "the array should be sorted properly")
     }
     

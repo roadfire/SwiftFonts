@@ -13,8 +13,7 @@ class FontSorter
     /* This function is necessary because fonts shouldn't always be sorted alphabetically.
        For example, ArialMT should come before Arial-BoldItalicMT,
        but if we sort alphabetically, it doesn't. */
-
-    func sortFontNames(array: String[]) -> String[]
+    func sortFontNames(array: [String]) -> [String]
     {
         let predicate = { (s1: String, s2: String) -> Bool in
             let count1 = countElements(s1.componentsSeparatedByString("-"))
@@ -46,6 +45,6 @@ class FontSorter
             return s1 < s2
         }
         
-        return sort(array, predicate)
+        return sorted(array, predicate)
     }
 }
