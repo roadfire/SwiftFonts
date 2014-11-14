@@ -12,29 +12,29 @@ class MasterViewController: UITableViewController
 {
     let viewModel = MasterViewModel()
 
-    required init(coder aDecoder: NSCoder!)
+    required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
     }
 
-    override func numberOfSectionsInTableView(tableView: UITableView!) -> Int
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
         return self.viewModel.numberOfSections()
     }
 
-    override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return self.viewModel.numberOfRowsInSection(section)
     }
 
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         self.configureCell(cell, atIndexPath: indexPath);
         return cell
     }
 
-    override func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
     {
         let label = UILabel(frame: CGRectMake(0, 0, 280, 200))
         label.text = viewModel.titleAtIndexPath(indexPath)
@@ -52,6 +52,6 @@ class MasterViewController: UITableViewController
     func fontAtIndexPath(indexPath: NSIndexPath) -> UIFont
     {
         let fontName = viewModel.titleAtIndexPath(indexPath)
-        return UIFont(name:fontName, size: UIFont.systemFontSize())
+        return UIFont(name:fontName, size: UIFont.systemFontSize())!
     }
 }

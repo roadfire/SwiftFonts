@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030AB6F31A158E2900D336F9 /* FontSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037EC358195315DD004D2234 /* FontSorter.swift */; };
 		031A536419530A9700CF0B19 /* FontSorterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031A536319530A9700CF0B19 /* FontSorterTests.swift */; };
 		033EB972193EA367006704FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033EB971193EA367006704FA /* AppDelegate.swift */; };
 		033EB974193EA367006704FA /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033EB973193EA367006704FA /* MasterViewController.swift */; };
@@ -226,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				031A536419530A9700CF0B19 /* FontSorterTests.swift in Sources */,
+				030AB6F31A158E2900D336F9 /* FontSorter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

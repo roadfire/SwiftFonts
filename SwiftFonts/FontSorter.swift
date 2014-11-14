@@ -8,20 +8,12 @@
 
 import Foundation
 
-public class FontSorter
+class FontSorter
 {
-    
-    public init()
-    {
-        // needed for testing
-        // not sure if something needs to go inside here...
-    }
-    
     /* This function is necessary because fonts shouldn't always be sorted alphabetically.
        For example, ArialMT should come before Arial-BoldItalicMT,
        but if we sort alphabetically, it doesn't. */
-
-    public func sortFontNames(array: [String]) -> [String]
+    func sortFontNames(array: [String]) -> [String]
     {
         let predicate = { (s1: String, s2: String) -> Bool in
             let count1 = countElements(s1.componentsSeparatedByString("-"))
