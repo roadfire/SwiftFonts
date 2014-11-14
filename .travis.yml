@@ -1,0 +1,3 @@
+language: swift
+xcode_project: SwiftFonts.xcodeproj
+xcode_scheme: SwiftFontsTests
