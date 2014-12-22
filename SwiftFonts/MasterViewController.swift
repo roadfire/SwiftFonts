@@ -45,8 +45,8 @@ class MasterViewController: UITableViewController
     
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath)
     {
-        cell.textLabel.text = viewModel.titleAtIndexPath(indexPath)
-        cell.textLabel.font = self.fontAtIndexPath(indexPath)
+        cell.textLabel?.text = viewModel.titleAtIndexPath(indexPath)
+        cell.textLabel?.font = self.fontAtIndexPath(indexPath)
     }
     
     func fontAtIndexPath(indexPath: NSIndexPath) -> UIFont
