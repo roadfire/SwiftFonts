@@ -7,7 +7,7 @@ An app to list the available fonts on iOS, written entirely in Swift.
 
 ## Want to learn more?
 
-If you enjoyed this, you might like our other sample apps, tutorials and articles. Join the mailing list to get more great free stuff: [http://eepurl.com/FSeIT](http://eepurl.com/FSeIT)
+Get started with Swift with our Free 5-Part Guide: [http://roadfiresoftware.com/free-swift-course/](http://roadfiresoftware.com/free-swift-course/)
 
 ## Author
 
