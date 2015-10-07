@@ -12,11 +12,6 @@ class MasterViewController: UITableViewController
 {
     let viewModel = MasterViewModel()
 
-    required init(coder aDecoder: NSCoder)
-    {
-        super.init(coder: aDecoder)
-    }
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
         return self.viewModel.numberOfSections()
@@ -29,7 +24,7 @@ class MasterViewController: UITableViewController
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) 
         self.configureCell(cell, atIndexPath: indexPath);
         return cell
     }

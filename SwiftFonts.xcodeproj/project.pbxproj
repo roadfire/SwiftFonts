@@ -14,6 +14,7 @@
 		033EB977193EA367006704FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033EB975193EA367006704FA /* Main.storyboard */; };
 		033EB979193EA367006704FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 033EB978193EA367006704FA /* Images.xcassets */; };
 		037EC359195315DD004D2234 /* FontSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037EC358195315DD004D2234 /* FontSorter.swift */; };
+		03AD698B1BC5989D0005B687 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AD698A1BC5989D0005B687 /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		03FC6CA3195C437D00AEED9B /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC6CA2195C437D00AEED9B /* MasterViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		033EB97E193EA367006704FA /* SwiftFontsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftFontsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		033EB983193EA367006704FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		037EC358195315DD004D2234 /* FontSorter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontSorter.swift; sourceTree = "<group>"; };
+		03AD698A1BC5989D0005B687 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		03FC6CA2195C437D00AEED9B /* MasterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 				033EB973193EA367006704FA /* MasterViewController.swift */,
 				03FC6CA2195C437D00AEED9B /* MasterViewModel.swift */,
 				037EC358195315DD004D2234 /* FontSorter.swift */,
+				03AD698A1BC5989D0005B687 /* Launch Screen.storyboard */,
 			);
 			path = SwiftFonts;
 			sourceTree = "<group>";
@@ -160,6 +163,8 @@
 		033EB964193EA367006704FA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Roadfire Software";
 				TargetAttributes = {
@@ -196,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03AD698B1BC5989D0005B687 /* Launch Screen.storyboard in Resources */,
 				033EB977193EA367006704FA /* Main.storyboard in Resources */,
 				033EB979193EA367006704FA /* Images.xcassets in Resources */,
 			);
@@ -334,7 +340,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = SwiftFonts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -345,7 +350,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = SwiftFonts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

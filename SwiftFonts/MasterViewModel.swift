@@ -15,27 +15,27 @@ class MasterViewModel
 
     init()
     {
-        let unsortedFamilyNames = UIFont.familyNames() as! [String]
-        familyNames = sorted(unsortedFamilyNames)
+        let unsortedFamilyNames = UIFont.familyNames() 
+        familyNames = unsortedFamilyNames.sort()
         
         let sorter = FontSorter()
         for familyName in familyNames
         {
-            let unsortedFontNames = UIFont.fontNamesForFamilyName(familyName) as! [String]
+            let unsortedFontNames = UIFont.fontNamesForFamilyName(familyName) 
             fonts[familyName] = sorter.sortFontNames(unsortedFontNames)
         }
     }
     
     func numberOfSections() -> Int
     {
-        return count(familyNames)
+        return familyNames.count
     }
     
     func numberOfRowsInSection(section: Int) -> Int
     {
         let key = familyNames[section]
         let array = fonts[key]!
-        return count(array)
+        return array.count
     }
     
     func titleAtIndexPath(indexPath: NSIndexPath) -> String

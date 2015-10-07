@@ -16,10 +16,10 @@ class FontSorter
     func sortFontNames(array: [String]) -> [String]
     {
         let predicate = { (s1: String, s2: String) -> Bool in
-            let count1 = count(s1.componentsSeparatedByString("-"))
+            let count1 = s1.componentsSeparatedByString("-").count
             let s1ContainsHyphen = count1 != 1
 
-            let count2 = count(s2.componentsSeparatedByString("-"))
+            let count2 = s2.componentsSeparatedByString("-").count
             let s2ContainsHyphen = count2 != 1
             
             if (s1ContainsHyphen && s2ContainsHyphen)
@@ -45,6 +45,6 @@ class FontSorter
             return s1 < s2
         }
         
-        return sorted(array, predicate)
+        return array.sort(predicate)
     }
 }
